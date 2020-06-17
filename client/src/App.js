@@ -3,6 +3,8 @@ import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
 import './App.css'
 import Launches from './components/Launches'
+import Routes from './routes'
+import SolarBackGround from './components/SolarBackGround'
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -11,8 +13,9 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="container">SpaceX</div>
-      <Launches />
+      <SolarBackGround>
+        <Routes />
+      </SolarBackGround>
     </ApolloProvider>
   )
 }

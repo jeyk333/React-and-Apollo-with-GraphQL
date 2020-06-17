@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none !important;
+}
+
+.logo {
+  width: 35%;
+}
+
+.header .navBar {
+  border: none !important;
+  top: 0;
+  left: 0;
+  position: unset;
+  margin-right: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar a {
+  font-size: 26px;
+  color: #fff;
+}
