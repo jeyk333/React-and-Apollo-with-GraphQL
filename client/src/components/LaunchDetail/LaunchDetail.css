@@ -1,0 +1,188 @@
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  color: #fff;
+  z-index: 999;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: darkslategrey;
+}
+
+.card h4 {
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+.card h4 span {
+  display: block;
+  font-size: 12px;
+}
+
+.card p span {
+  display: block;
+  font-size: 12px;
+}
+
+.red-fail {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: #f00;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 12px;
+  -webkit-animation: fail 1s infinite;
+  -moz-animation: fail 1s infinite;
+  -ms-animation: fail 1s infinite;
+  -o-animation: fail 1s infinite;
+  animation: fail 1s infinite;
+}
+
+@-webkit-keyframes fail {
+  from {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    background-color: #f00;
+  }
+}
+@-moz-keyframes fail {
+  from {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    background-color: #f00;
+  }
+}
+@-ms-keyframes fail {
+  from {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    background-color: #f00;
+  }
+}
+@-o-keyframes fail {
+  from {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    background-color: #f00;
+  }
+}
+@keyframes fail {
+  from {
+    background-color: #f00;
+  }
+  50% {
+    background-color: #a00;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #441313 0 -1px 9px, rgba(255, 0, 0, 0.5) 0 2px 0;
+  }
+  to {
+    background-color: #f00;
+  }
+}
+
+.green-success {
+  margin: 0 auto;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(34, 139, 34);
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 12px;
+  -webkit-animation: success 1s infinite;
+  -moz-animation: success 1s infinite;
+  -ms-animation: success 1s infinite;
+  -o-animation: success 1s infinite;
+  animation: success 1s infinite;
+}
+
+@-webkit-keyframes success {
+  from {
+    background-color: rgb(34, 139, 34);
+  }
+  50% {
+    background-color: rgb(34, 139, 34);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 0;
+  }
+  to {
+    background-color: rgb(34, 139, 34);
+  }
+}
+@-moz-keyframes success {
+  from {
+    background-color: rgb(34, 139, 34);
+  }
+  50% {
+    background-color: rgb(34, 139, 34);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 0;
+  }
+  to {
+    background-color: rgb(34, 139, 34);
+  }
+}
+@-ms-keyframes success {
+  from {
+    background-color: rgb(34, 139, 34);
+  }
+  50% {
+    background-color: rgb(34, 139, 34);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 0;
+  }
+  to {
+    background-color: rgb(34, 139, 34);
+  }
+}
+@-o-keyframes success {
+  from {
+    background-color: rgb(34, 139, 34);
+  }
+  50% {
+    background-color: rgb(34, 139, 34);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 0;
+  }
+  to {
+    background-color: rgb(34, 139, 34);
+  }
+}
+@keyframes success {
+  from {
+    background-color: rgb(34, 139, 34);
+  }
+  50% {
+    background-color: rgb(34, 139, 34);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgb(0, 100, 0) 0 -1px 9px, rgb(0, 128, 0) 0 2px 0;
+  }
+  to {
+    background-color: rgb(34, 139, 34);
+  }
+}

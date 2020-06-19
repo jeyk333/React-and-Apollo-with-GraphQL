@@ -1,0 +1,19 @@
+.launches {
+  position: absolute;
+  left: 0 !important;
+  top: 0 !important;
+  border: none !important;
+  width: 100%;
+}
+.launchWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  height: 640px;
+}
+
+.launchWrapper::-webkit-scrollbar {
+  display: none;
+}
