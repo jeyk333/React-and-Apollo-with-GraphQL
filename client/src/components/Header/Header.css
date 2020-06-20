@@ -2,9 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: none !important;
-  left: 0 !important;
-  width: 100%;
 }
 
 .logo {
@@ -12,10 +9,6 @@
 }
 
 .header .navBar {
-  border: none !important;
-  top: 0;
-  left: 0;
-  position: unset;
   margin-right: 200px;
   display: flex;
   flex-direction: column;
