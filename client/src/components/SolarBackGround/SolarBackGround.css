@@ -5,6 +5,7 @@
   position: relative;
   background: radial-gradient(ellipse at bottom, #1c2837 0%, #050608 100%);
   background-attachment: fixed;
+  overflow: hidden
 }
 .solar-syst:after {
   content: '';

@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
 import Header from '../../components/Header'
 import './Launches.css'
-import LaunchDetail from '../../components/LaunchDetail'
+import LaunchCard from '../../components/LaunchCard'
 import RocketLoader from '../../components/RocketLoader'
 
 const LAUNCHES_QUERY = gql`
@@ -23,6 +23,7 @@ class Launches extends Component {
     return (
       <div className="launches">
         <Header />
+        <h1>Launches</h1>
         <div className="launchWrapper">
           <Query query={LAUNCHES_QUERY}>
             {({ loading, error, data }) => {
@@ -32,7 +33,7 @@ class Launches extends Component {
               return (
                 <>
                   {data.launches.map((launch) => (
-                    <LaunchDetail key={launch.flight_number} launch={launch} />
+                    <LaunchCard key={launch.flight_number} launch={launch} />
                   ))}
                 </>
               )

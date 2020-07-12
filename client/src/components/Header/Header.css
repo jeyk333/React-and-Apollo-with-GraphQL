@@ -18,3 +18,19 @@
   font-size: 26px;
   color: #fff;
 }
+
+@media only screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header .navBar {
+  margin-right: 0;
+  display: block;
+  }
+
+  .navBar a {
+    margin-right: 10px;
+  }
+}
+

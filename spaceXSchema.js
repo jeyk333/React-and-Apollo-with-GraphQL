@@ -9,10 +9,10 @@ const LaunchType = new GraphQLObjectType({
     mission_name: { type: GraphQLString },
     launch_date_utc: { type: GraphQLString },
     launch_success: { type: GraphQLBoolean },
-    details: { type: GraphQLString},
+    details: { type: GraphQLString },
     rocket: { type: RocketType },
-    launch_site: {type: LaunchSiteType},
-    links: {type: LinksType}
+    launch_site: { type: LaunchSiteType },
+    links: { type: LinksType },
   }),
 })
 
@@ -30,21 +30,21 @@ const RocketType = new GraphQLObjectType({
 const LaunchSiteType = new GraphQLObjectType({
   name: 'LaunchSite',
   fields: () => ({
-    site_id: {type: GraphQLString},
-    site_name: {type: GraphQLString},
-  })
+    site_id: { type: GraphQLString },
+    site_name: { type: GraphQLString },
+  }),
 })
 
 //Links Type
 const LinksType = new GraphQLObjectType({
   name: 'LinksType',
   fields: () => ({
-    mission_patch: {type: GraphQLString},
-    article_link: {type: GraphQLString},
-    wikipedia: {type: GraphQLString},
-    video_link: {type: GraphQLString},
-    flickr_images: {type: new GraphQLList(GraphQLString)}
-  })
+    mission_patch: { type: GraphQLString },
+    article_link: { type: GraphQLString },
+    wikipedia: { type: GraphQLString },
+    video_link: { type: GraphQLString },
+    flickr_images: { type: new GraphQLList(GraphQLString) },
+  }),
 })
 
 //Root Query Type
@@ -85,23 +85,23 @@ const RootQuery = new GraphQLObjectType({
         return axios.get(`https://api.spacexdata.com/v4/rockets/${args.id}`).then((res) => res.data)
       },
     },
-      sites: {
-        type: new GraphQLList(LaunchSiteType),
-        resolve(parent, args) {
-          return axios.get('https://api.spacexdata.com/v3/launchpads').then((res) => res.data)
+    sites: {
+      type: new GraphQLList(LaunchSiteType),
+      resolve(parent, args) {
+        return axios.get('https://api.spacexdata.com/v3/launchpads').then((res) => res.data)
+      },
+    },
+    site: {
+      type: LaunchSiteType,
+      args: {
+        site_id: {
+          type: GraphQLString,
         },
       },
-      site: {
-        type: LaunchSiteType,
-        args: {
-          site_id: {
-            type: GraphQLString,
-          },
-        },
-        resolve(parent, args) {
-          return axios.get(`LaunchSiteType/${args.site_id}`).then((res) => res.data)
-        },
+      resolve(parent, args) {
+        return axios.get(`LaunchSiteType/${args.site_id}`).then((res) => res.data)
       },
+    },
   }),
 })
 

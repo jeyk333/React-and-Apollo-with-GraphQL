@@ -1,0 +1,39 @@
+.rocketCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  color: #fff;
+  z-index: 999;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.rocketCard:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: darkslategrey;
+}
+
+.rocketCard h4 {
+  margin-top: 10px;
+}
+
+.rocketCard p {
+  margin-top: 10px;
+}
+
+.rocketCard h4 span {
+  display: block;
+  font-size: 12px;
+}
+
+.rocketCard p span {
+  display: block;
+  font-size: 12px;
+}
